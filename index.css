@@ -1,0 +1,170 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #0A192F;
+  color: #cbd5e1;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Customized Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A192F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* For Floating Labels & Radio Buttons */
+.form-radio {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #334155;
+  border: 1px solid #475569;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  display: grid;
+  place-content: center;
+}
+
+.form-radio::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #10b981;
+}
+
+.form-radio:checked::before {
+  transform: scale(1);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* For Scroll Animations (AnimatedSection) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 
+  SIMPLE MARQUEE ANIMATION 
+  Moves content from Left to Right.
+  Start: -100% (Left side out)
+  End: 0% (Original position)
+  
+  Wait, for infinite loop of two sets [A][B]:
+  We want to see [A] then [B] then [A]...
+  Moving Left-to-Right (Entering from Left):
+  We need to start at a position where [B] is visible on left?
+  
+  Let's stick to the standard infinite scroll logic.
+  Standard: Move Right-to-Left (translateX(0) -> translateX(-50%)).
+  Reverse (Left-to-Right): translateX(-50%) -> translateX(0).
+  
+  This assumes the container is wide enough (200% width of visible area).
+*/
+@keyframes marquee-left-to-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-left-to-right 40s linear infinite;
+}
+
+@keyframes marquee-right-to-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-rtl {
+  animation: marquee-right-to-left 40s linear infinite;
+}
+
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
