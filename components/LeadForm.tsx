@@ -26,6 +26,12 @@ const LeadForm: React.FC = () => {
         e.preventDefault();
         setStatus('submitting');
 
+        if (!supabase) {
+            console.error('Supabase is not configured. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY environment variables.');
+            setStatus('error');
+            return;
+        }
+
         try {
             const { error } = await supabase
                 .from('leads')
