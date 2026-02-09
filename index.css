@@ -1,170 +1,201 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
-body {
-  font-family: 'Tajawal', sans-serif;
-  background-color: #0A192F;
-  color: #cbd5e1;
-  margin: 0;
-  padding: 0;
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.5);
+    --gold: #fbbf24;
+    --success: #22c55e;
+    --error: #ef4444;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+    direction: rtl;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-/* Customized Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-::-webkit-scrollbar-track {
-  background: #0A192F;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
 }
 
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-/* For Floating Labels & Radio Buttons */
-.form-radio {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #334155;
-  border: 1px solid #475569;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 9999px;
-  display: grid;
-  place-content: center;
+.section {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.form-radio::before {
-  content: "";
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 9999px;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em #10b981;
+.text-center {
+    text-align: center;
 }
 
-.form-radio:checked::before {
-  transform: scale(1);
+.text-right {
+    text-align: right;
 }
 
-/* Animations */
-@keyframes fade-in-up {
-  from {
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.heading-xl {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-lg {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.heading-md {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.text-lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Components */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), #2563eb);
+    color: white;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Animated Section */
+.fade-in-section {
     opacity: 0;
     transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
-
-.delay-100 {
-  animation-delay: 0.1s;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-}
-
-.delay-300 {
-  animation-delay: 0.3s;
-}
-
-.delay-400 {
-  animation-delay: 0.4s;
-}
-
-/* For Scroll Animations (AnimatedSection) */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  will-change: opacity, transform;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
 }
 
 .fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: none;
 }
 
-/* 
-  SIMPLE MARQUEE ANIMATION 
-  Moves content from Left to Right.
-  Start: -100% (Left side out)
-  End: 0% (Original position)
-  
-  Wait, for infinite loop of two sets [A][B]:
-  We want to see [A] then [B] then [A]...
-  Moving Left-to-Right (Entering from Left):
-  We need to start at a position where [B] is visible on left?
-  
-  Let's stick to the standard infinite scroll logic.
-  Standard: Move Right-to-Left (translateX(0) -> translateX(-50%)).
-  Reverse (Left-to-Right): translateX(-50%) -> translateX(0).
-  
-  This assumes the container is wide enough (200% width of visible area).
-*/
-@keyframes marquee-left-to-right {
-  0% {
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
+/* Background Effects */
+.glow-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(15, 23, 42, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.animate-marquee-ltr {
-  animation: marquee-left-to-right 40s linear infinite;
-}
+/* Responsive */
+@media (max-width: 768px) {
+    .heading-xl {
+        font-size: 2.2rem;
+    }
 
-@keyframes marquee-right-to-left {
-  0% {
-    transform: translateX(0%);
-  }
+    .heading-lg {
+        font-size: 1.8rem;
+    }
 
-  100% {
-    transform: translateX(-50%);
-  }
-}
+    .section {
+        padding: 3rem 0;
+    }
 
-.animate-marquee-rtl {
-  animation: marquee-right-to-left 40s linear infinite;
-}
-
-
-/* Floating Animation */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+    .container {
+        padding: 0 1rem;
+    }
 }
