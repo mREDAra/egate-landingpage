@@ -10,6 +10,22 @@ const HeroSection: React.FC = () => {
             background: 'radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, var(--bg-primary) 70%)',
             textAlign: 'center'
         }}>
+            <div style={{
+                position: 'absolute',
+                top: '2rem',
+                left: '2rem',
+                zIndex: 10
+            }}>
+                <img
+                    src="/assets/logo.png"
+                    alt="E-GATE GROUP"
+                    style={{
+                        height: '60px',
+                        width: 'auto',
+                        objectFit: 'contain'
+                    }}
+                />
+            </div>
             <div className="container">
                 <AnimatedSection className="hero-content">
                     <div style={{ marginBottom: '2rem' }}>
