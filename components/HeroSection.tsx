@@ -6,14 +6,16 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
         <section className="section hero-section" style={{
             minHeight: '100vh',
             display: 'flex',
-            alignItems: 'center',
+            flexDirection: 'column',
             background: 'radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, var(--bg-primary) 70%)',
-            textAlign: 'center'
+            textAlign: 'center',
+            paddingTop: 0,
         }}>
             <div style={{
-                position: 'absolute',
-                top: '2rem',
-                left: '2rem',
+                width: '100%',
+                padding: '2rem',
+                display: 'flex',
+                justifyContent: 'flex-end', // Aligns left in RTL
                 zIndex: 10
             }}>
                 <img
@@ -26,7 +28,12 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
                     }}
                 />
             </div>
-            <div className="container">
+            <div className="container" style={{
+                flex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
+            }}>
                 <AnimatedSection className="hero-content">
                     <div style={{ marginBottom: '2rem' }}>
                         <span style={{
