@@ -46,7 +46,7 @@ const RisksSection: React.FC = () => {
 
                     <div className="text-center mt-12" style={{ marginTop: '3rem' }}>
                         <h3 className="heading-md" style={{ color: 'var(--error)' }}>
-                            هذه ليست أنظمة تحصيل. هذه <span style={{ fontWeight: '800', borderBottom: '2px solid var(--error)' }}>رهانات خطرة</span>.
+                            هذه ليست أنظمة تحصيل. لأنها <span style={{ fontWeight: '800', borderBottom: '2px solid var(--error)' }}>تحتوي على مفاجئات خطرة</span>.
                         </h3>
                     </div>
                 </AnimatedSection>

@@ -173,13 +173,16 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 <div className="modal-body" ref={modalBodyRef}>
 
                     {/* Important Note */}
-                    <div className="important-note">
-                        <span className="important-icon">⚠️</span>
-                        <div>
-                            <p style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>ملاحظة مهمة:</p>
-                            <p className="important-text">هذا النموذج مخصص للمتاجر الإلكترونية الشغالة فعليًا. نقبل عددًا محدودًا من الأنشطة لضمان استمرارية الخدمة.</p>
+                    {/* Important Note */}
+                    {step === 1 && (
+                        <div className="important-note">
+                            <span className="important-icon">⚠️</span>
+                            <div>
+                                <p style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>ملاحظة مهمة:</p>
+                                <p className="important-text">هذا النموذج مخصص للمتاجر الإلكترونية الشغالة فعليًا. نقبل عددًا محدودًا من الأنشطة لضمان استمرارية الخدمة.</p>
+                            </div>
                         </div>
-                    </div>
+                    )}
 
                     <form onSubmit={handleSubmit} className="options-grid">
 
@@ -421,7 +424,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                                 </div>
                                 <h3 className="heading-md" style={{ color: '#fff' }}>الخطوة الأخيرة</h3>
 
-                                <div className="card" style={{ marginTop: '2rem', textAlign: 'right' }}>
+                                <div className="card" style={{ marginTop: '2rem', textAlign: 'right', height: 'auto' }}>
                                     <p className="text-secondary" style={{ marginBottom: '1rem', lineHeight: '1.8' }}>
                                         بعد إرسال النموذج، سيقوم فريقنا بمراجعة نشاطك.
                                         في حال كان متجرك مؤهلًا، سيتم التواصل معك لتحديد مكالمة تشخيص قصيرة.

@@ -271,6 +271,10 @@ button {
     align-items: center;
 }
 
+.payment-logos-marquee {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .payment-logos-wrapper {
         display: none !important;
