@@ -22,8 +22,9 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
                 <img
                     src="/assets/logo.png"
                     alt="E-GATE GROUP"
+                    className="hero-logo"
                     style={{
-                        height: '60px',
+                        height: '60px', // Fallback/Default
                         width: 'auto',
                         objectFit: 'contain'
                     }}

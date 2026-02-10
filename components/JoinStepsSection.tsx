@@ -33,12 +33,14 @@ const JoinStepsSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) 
                             background: '#fff',
                             color: 'var(--accent-dark)',
                             fontWeight: 'bold',
-                            padding: '1.2rem 4rem',
+                            padding: '1.2rem 2rem',
                             fontSize: '1.3rem',
                             marginTop: '1rem',
                             cursor: 'pointer',
                             border: 'none',
-                            borderRadius: '50px'
+                            borderRadius: '50px',
+                            width: '100%',
+                            maxWidth: '400px'
                         }}>
                             قدّم طلب الانضمام الآن
                         </button>

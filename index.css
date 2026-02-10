@@ -229,11 +229,27 @@ button {
     }
 
     .section {
-        padding: 4rem 0;
+        padding: 3rem 0;
+        /* Reduced from 4rem for better mobile spacing */
     }
 
     .container {
         padding: 0 1.25rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        /* Reduced padding for mobile buttons */
+        font-size: 1rem;
+        width: 100%;
+        /* Full width buttons on mobile usually look better */
+    }
+
+    /* Improve Grid on Mobile */
+    .grid-3 {
+        grid-template-columns: 1fr;
+        /* Stack items on mobile */
+        gap: 1.5rem;
     }
 
     /* Mobile Slider */
@@ -310,5 +326,10 @@ button {
         100% {
             transform: translateX(50%);
         }
+    }
+
+    .hero-logo {
+        height: 40px !important;
+        /* Smaller logo on mobile */
     }
 }
