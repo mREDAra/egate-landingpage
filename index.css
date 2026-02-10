@@ -261,3 +261,50 @@ button {
         scroll-snap-align: center;
     }
 }
+
+/* Payment Logos Mobile Marquee */
+.payment-logos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .payment-logos-wrapper {
+        display: none !important;
+    }
+
+    .payment-logos-marquee {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        width: 100%;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .payment-logos-track {
+        flex-shrink: 0;
+        display: flex;
+        gap: 3rem;
+        min-width: 100%;
+        justify-content: space-around;
+        animation: marquee-scroll 20s linear infinite;
+    }
+
+    .payment-logos-track:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes marquee-scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(50%);
+        }
+    }
+}

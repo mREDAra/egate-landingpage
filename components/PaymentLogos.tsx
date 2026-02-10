@@ -14,7 +14,8 @@ const PaymentLogos: React.FC = () => {
   return (
     <section className="section" style={{ padding: '2rem 0', background: 'var(--bg-secondary)', borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)' }}>
       <div className="container">
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem', alignItems: 'center' }}>
+        {/* Desktop Grid */}
+        <div className="payment-logos-wrapper">
           {LOGOS.map((logo, idx) => (
             <div key={idx} style={{
               opacity: 0.7,
@@ -32,6 +33,26 @@ const PaymentLogos: React.FC = () => {
               />
             </div>
           ))}
+        </div>
+
+        {/* Mobile Marquee */}
+        <div className="payment-logos-marquee">
+          <div className="payment-logos-track">
+            {/* Triplicate logos for smoother infinite scroll on wide mobile screens */}
+            {[...LOGOS, ...LOGOS, ...LOGOS].map((logo, idx) => (
+              <div key={`marquee-${idx}`} style={{
+                opacity: 0.9,
+                flexShrink: 0
+              }}>
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  style={{ height: '35px', width: 'auto', objectFit: 'contain' }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
