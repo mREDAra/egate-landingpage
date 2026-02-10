@@ -36,15 +36,30 @@ const SocialProofSection: React.FC = () => {
                     <h3 className="heading-lg" style={{ marginTop: '4rem', marginBottom: '2rem' }}>ماذا قال عملاؤنا</h3>
                     <div className="grid grid-3 mobile-slider" style={{ textAlign: 'right' }}>
                         <div className="card">
-                            <h4 className="heading-md" style={{ fontSize: '1rem' }}>خالد السماعيل - منصة هدف</h4>
+                            <h4 className="heading-md" style={{ fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={{ height: '1.25rem', width: '1.25rem', color: 'var(--accent)' }}>
+                                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                                </svg>
+                                <span>خالد السماعيل - منصة هدف</span>
+                            </h4>
                             <p className="text-secondary" style={{ fontSize: '0.9rem' }}>من أكثر من سنة ونحن عم نتعامل معكم, معاملة رائعة, سرعة في التنفيذ, وجهود جبارة في خدمة الزبائن... ساعدتونا نركز على شغلنا بدون مانقلق من بوابة الدفع.</p>
                         </div>
                         <div className="card">
-                            <h4 className="heading-md" style={{ fontSize: '1rem' }}>Baraaa Khatab - VAR 8K</h4>
+                            <h4 className="heading-md" style={{ fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={{ height: '1.25rem', width: '1.25rem', color: 'var(--accent)' }}>
+                                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                                </svg>
+                                <span>Baraaa Khatab - VAR 8K</span>
+                            </h4>
                             <p className="text-secondary" style={{ fontSize: '0.9rem' }}>من ناحية العملية شفافية وثقة عالية, ومن ناحية التقنية واضح شغل مبني على تجارب عملية قوية وخبرة حقيقية في مجال بوابات الدفع.</p>
                         </div>
                         <div className="card">
-                            <h4 className="heading-md" style={{ fontSize: '1rem' }}>Obaidah Academy</h4>
+                            <h4 className="heading-md" style={{ fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={{ height: '1.25rem', width: '1.25rem', color: 'var(--accent)' }}>
+                                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                                </svg>
+                                <span>Obaidah Academy</span>
+                            </h4>
                             <p className="text-secondary" style={{ fontSize: '0.9rem' }}>تعامل راقي, سرعة إنجاز, ومصداقية عالية.. شكرا</p>
                         </div>
                     </div>
