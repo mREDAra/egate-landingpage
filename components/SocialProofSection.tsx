@@ -26,8 +26,8 @@ const SocialProofSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div style={{ marginTop: '4rem', padding: '2rem', border: '1px dashed var(--gold)', borderRadius: '1rem', display: 'inline-block' }}>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--gold)' }}>
+                    <div style={{ marginTop: '4rem', padding: '2rem', border: '1px dashed var(--accent)', borderRadius: '1rem', display: 'inline-block' }}>
+                        <p style={{ fontSize: '1.2rem', color: 'var(--accent)' }}>
                             بعض شركائنا يعملون معنا منذ أكثر من <strong style={{ fontSize: '1.5rem' }}>سنتين</strong> بدون أي انقطاع في التحصيل.
                         </p>
                         <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>الاستمرارية هي الدليل الأقوى.</p>

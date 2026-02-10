@@ -31,7 +31,7 @@ const ProblemSection: React.FC = () => {
                     </div>
 
                     <p className="heading-md" style={{ marginTop: '3rem', color: 'var(--text-primary)' }}>
-                        الدفع قرار <span style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)', color: 'var(--gold)' }}>نفسي</span> قبل أن يكون تقني.
+                        الدفع قرار <span style={{ textDecoration: 'underline', textDecorationColor: 'var(--accent)', color: 'var(--accent)' }}>نفسي</span> قبل أن يكون تقني.
                     </p>
                 </AnimatedSection>
             </div>
