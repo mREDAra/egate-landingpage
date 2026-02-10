@@ -33,7 +33,8 @@ const SocialProofSection: React.FC = () => {
                         <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>الاستمرارية هي الدليل الأقوى.</p>
                     </div>
 
-                    <div className="grid grid-3" style={{ marginTop: '4rem', textAlign: 'right' }}>
+                    <h3 className="heading-lg" style={{ marginTop: '4rem', marginBottom: '2rem' }}>ماذا قال عملاؤنا</h3>
+                    <div className="grid grid-3 mobile-slider" style={{ textAlign: 'right' }}>
                         <div className="card">
                             <h4 className="heading-md" style={{ fontSize: '1rem' }}>خالد السماعيل - منصة هدف</h4>
                             <p className="text-secondary" style={{ fontSize: '0.9rem' }}>من أكثر من سنة ونحن عم نتعامل معكم, معاملة رائعة, سرعة في التنفيذ, وجهود جبارة في خدمة الزبائن... ساعدتونا نركز على شغلنا بدون مانقلق من بوابة الدفع.</p>

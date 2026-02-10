@@ -235,4 +235,29 @@ button {
     .container {
         padding: 0 1.25rem;
     }
+
+    /* Mobile Slider */
+    .mobile-slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+        margin-right: -1.25rem;
+        padding-right: 1.25rem;
+        margin-left: -1.25rem;
+        padding-left: 1.25rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    .mobile-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-slider>* {
+        flex: 0 0 85%;
+        width: 85%;
+        scroll-snap-align: center;
+    }
 }
