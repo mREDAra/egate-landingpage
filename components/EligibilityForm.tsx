@@ -75,10 +75,12 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
         // Basic validation for the last step
         if (!formData.goldQuestion.trim()) {
-            alert('يرجى الإجابة على السؤال الأخير');
+            setSubmitStatus('error');
+            setErrorMessage('يرجى الإجابة على السؤال الأخير قبل الإرسال.');
             return;
         }
 
+        setSubmitStatus('idle');
         setIsSubmitting(true);
         setErrorMessage('');
 
