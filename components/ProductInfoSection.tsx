@@ -3,15 +3,15 @@ import AnimatedSection from './AnimatedSection';
 
 const ProductInfoSection: React.FC = () => {
     return (
-        <section className="section" style={{ backgroundColor: '#1e293b' }}>
+        <section className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
             <div className="container">
                 <div className="grid grid-2" style={{ alignItems: 'center' }}>
                     <AnimatedSection>
                         <h2 className="heading-lg">
-                            <span style={{ color: '#38bdf8' }}>E-GATE Payment</span> <br />
+                            <span style={{ color: 'var(--accent)' }}>E-GATE Payment</span> <br />
                             نظام تحصيل مبيعات متكامل
                         </h2>
-                        <h3 className="heading-md" style={{ fontWeight: '400', color: '#94a3b8' }}>
+                        <h3 className="heading-md" style={{ fontWeight: '400', color: 'var(--text-secondary)' }}>
                             من الدفع إلى التسليم
                         </h3>
 
@@ -22,49 +22,63 @@ const ProductInfoSection: React.FC = () => {
                         <ul style={{ listStyle: 'none', padding: 0 }}>
                             {['استقبال المدفوعات بعدة عملات', 'استمرار الدفع حتى عند تعطل أحد المسارات', 'متابعة المبيعات بدقة عبر التطبيق', 'طلب سحب المستحقات مباشرة'].map((item, index) => (
                                 <li key={index} style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
-                                    <span style={{ background: '#38bdf8', width: '8px', height: '8px', borderRadius: '50%', marginLeft: '10px' }}></span>
+                                    <span style={{ background: 'var(--accent)', width: '8px', height: '8px', borderRadius: '50%', marginLeft: '10px' }}></span>
                                     {item}
                                 </li>
                             ))}
                         </ul>
 
-                        <div className="card" style={{ marginTop: '2rem', borderColor: '#fbbf24' }}>
+                        <div className="card" style={{ marginTop: '2rem', borderColor: 'var(--gold)' }}>
                             <h4 className="heading-md" style={{ fontSize: '1.1rem' }}>طرق استلام الأرباح:</h4>
                             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
-                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: '#fbbf24' }}>💵 كاش</span>
-                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: '#fbbf24' }}>🏦 تحويل بنكي</span>
-                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: '#fbbf24' }}>💎 USDT</span>
+                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: 'var(--gold)' }}>💵 كاش</span>
+                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: 'var(--gold)' }}>🏦 تحويل بنكي</span>
+                                <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: 'var(--gold)' }}>💎 USDT</span>
                             </div>
                         </div>
                     </AnimatedSection>
 
                     <AnimatedSection>
-                        {/* Placeholder for App Interface Image */}
+                        {/* App Interface Image */}
                         <div style={{
-                            background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
                             borderRadius: '20px',
-                            padding: '2rem',
-                            border: '1px solid rgba(255,255,255,0.1)',
+                            padding: '1rem',
+                            border: '1px solid var(--card-border)',
                             boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
-                            minHeight: '400px',
+                            background: 'var(--bg-secondary)',
                             display: 'flex',
-                            flexDirection: 'col',
-                            alignItems: 'center',
                             justifyContent: 'center',
-                            border: '1px solid #38bdf8'
+                            alignItems: 'center',
+                            position: 'relative',
+                            overflow: 'hidden'
                         }}>
-                            <div style={{ textAlign: 'center', opacity: 0.8 }}>
-                                <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>📱</div>
-                                <h3 className="heading-md">تطبيق التاجر</h3>
-                                <p>لوحة تحكم كاملة لمتابعة الأرصدة والسحوبات</p>
-                            </div>
+                            <div style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                background: 'radial-gradient(circle at center, var(--accent-glow) 0%, transparent 70%)',
+                                zIndex: 0
+                            }}></div>
+                            <img
+                                src="/dashboard.png"
+                                alt="Merchant Dashboard"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    borderRadius: '16px',
+                                    zIndex: 1,
+                                    boxShadow: '0 0 20px rgba(0,0,0,0.2)'
+                                }}
+                            />
                         </div>
                     </AnimatedSection>
                 </div>
 
                 <div className="text-center" style={{ marginTop: '4rem' }}>
                     <h3 className="heading-md">
-                        نحن نتحمّل كل التعقيد… وأنت تركز فقط على <span style={{ color: '#22c55e' }}>البيع والنمو</span>.
+                        نحن نتحمّل كل التعقيد… وأنت تركز فقط على <span style={{ color: 'var(--success)' }}>البيع والنمو</span>.
                     </h3>
                 </div>
             </div>

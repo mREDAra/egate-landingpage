@@ -1,43 +1,35 @@
-
 import React from 'react';
-import { PAYMENT_METHODS } from '../constants/content';
-import { PaymentMethod } from '../types';
 
-const Icon: React.FC<{ name: string }> = ({ name }) => {
-  let src = "";
-  switch (name) {
-    case 'visa': src = "/assets/logos/visa.png"; break;
-    case 'mastercard': src = "/assets/logos/mastercard.png"; break;
-    case 'mada': src = "/assets/logos/mada.png"; break;
-    case 'amex': src = "/assets/logos/amex.png"; break;
-    case 'applepay': src = "/assets/logos/applepay.png"; break;
-    case 'googlepay': src = "/assets/logos/googlepay.png"; break;
-    case 'knet': src = "/assets/logos/knet.png"; break;
-    default: return null;
-  }
-
-  return (
-    <div className="relative h-16 w-auto flex items-center justify-center">
-      <img
-        src={src}
-        alt={name}
-        className="h-16 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
-        loading="eager"
-        decoding="sync"
-      />
-    </div>
-  );
-};
+const LOGOS = [
+  { name: 'Visa', src: '/assets/logos/visa.png' },
+  { name: 'Mastercard', src: '/assets/logos/mastercard.png' },
+  { name: 'Mada', src: '/assets/logos/mada.png' },
+  { name: 'Apple Pay', src: '/assets/logos/applepay.png' },
+  { name: 'Google Pay', src: '/assets/logos/googlepay.png' },
+  { name: 'Amex', src: '/assets/logos/amex.png' },
+  { name: 'KNET', src: '/assets/logos/knet.png' }
+];
 
 const PaymentLogos: React.FC = () => {
   return (
-    <section className="py-8 bg-slate-900 border-y border-slate-800 relative z-20 w-full">
-      <div className="container mx-auto px-4">
-        {/* Static Grid Display */}
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
-          {PAYMENT_METHODS.map((method, idx) => (
-            <div key={`${method.name}-${idx}`} className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
-              <Icon name={method.icon} />
+    <section className="section" style={{ padding: '2rem 0', background: 'var(--bg-secondary)', borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)' }}>
+      <div className="container">
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem', alignItems: 'center' }}>
+          {LOGOS.map((logo, idx) => (
+            <div key={idx} style={{
+              opacity: 0.7,
+              transition: 'all 0.3s ease',
+              cursor: 'default'
+            }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'scale(1.1)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.transform = 'scale(1)'; }}
+            >
+              <img
+                src={logo.src}
+                alt={logo.name}
+                style={{ height: '40px', width: 'auto', objectFit: 'contain' }}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
+import PaymentLogos from './components/PaymentLogos';
 import ProblemSection from './components/ProblemSection';
 import RisksSection from './components/RisksSection';
 import SolutionNetworkSection from './components/SolutionNetworkSection';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <HeroSection />
+            <PaymentLogos />
             <ProblemSection />
             <RisksSection />
             <SolutionNetworkSection />
@@ -32,9 +34,9 @@ const App: React.FC = () => {
             <footer style={{
                 padding: '2rem',
                 textAlign: 'center',
-                background: '#0f172a',
-                borderTop: '1px solid #1e293b',
-                color: '#64748b'
+                background: 'var(--bg-primary)',
+                borderTop: '1px solid var(--card-border)',
+                color: 'var(--text-secondary)'
             }}>
                 <p>© {new Date().getFullYear()} E-GATE GROUP. All rights reserved.</p>
             </footer>

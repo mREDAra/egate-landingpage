@@ -3,10 +3,10 @@ import AnimatedSection from './AnimatedSection';
 
 const HighTicketSection: React.FC = () => {
     return (
-        <section className="section" style={{ background: 'linear-gradient(to right, #0f172a, #111827)' }}>
+        <section className="section" style={{ background: 'linear-gradient(to right, #020617, #0f172a)' }}>
             <div className="container">
                 <AnimatedSection className="text-center">
-                    <div style={{ display: 'inline-block', padding: '0.5rem 2rem', background: '#fbbf24', color: '#000', fontWeight: 'bold', borderRadius: '50px', marginBottom: '2rem' }}>
+                    <div style={{ display: 'inline-block', padding: '0.5rem 2rem', background: 'var(--gold)', color: '#000', fontWeight: 'bold', borderRadius: '50px', marginBottom: '2rem' }}>
                         High-Ticket Service
                     </div>
 
@@ -33,7 +33,7 @@ const HighTicketSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <p className="heading-md" style={{ marginTop: '3rem', color: '#fbbf24' }}>
+                    <p className="heading-md" style={{ marginTop: '3rem', color: 'var(--gold)' }}>
                         أنت لا تدفع مقابل التفعيل فقط.<br />
                         أنت تنضم <span style={{ textDecoration: 'underline' }}>لنظام يتحمّل أخطر جزء في البزنس بدلًا عنك</span>.
                     </p>
