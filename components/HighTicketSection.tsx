@@ -24,7 +24,7 @@ const HighTicketSection: React.FC = () => {
                             </div>
                             <div className="card" style={{ background: 'transparent', border: 'none' }}>
                                 <h3 className="heading-md" style={{ color: '#fff' }}>💎 شبكة حصرية</h3>
-                                <p className="text-secondary">الشبكة متاحة لعدد محدود من التجار الجادين فقط.</p>
+                                <p className="text-secondary">الشبكة متاحة لعدد محدود من المشاريع الجدية فقط.</p>
                             </div>
                             <div className="card" style={{ background: 'transparent', border: 'none' }}>
                                 <h3 className="heading-md" style={{ color: '#fff' }}>🤝 التزام حقيقي</h3>
@@ -35,7 +35,7 @@ const HighTicketSection: React.FC = () => {
 
                     <p className="heading-md" style={{ marginTop: '3rem', color: 'var(--gold)' }}>
                         أنت لا تدفع مقابل التفعيل فقط.<br />
-                        أنت تنضم <span style={{ textDecoration: 'underline' }}>لنظام يتحمّل أخطر جزء في البزنس بدلًا عنك</span>.
+                        بل تنضم <span style={{ textDecoration: 'underline' }}>لنظام يتحمّل أخطر جزء في البزنس بدلًا عنك</span>.
                     </p>
                 </AnimatedSection>
             </div>

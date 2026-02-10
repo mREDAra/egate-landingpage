@@ -16,7 +16,7 @@ const ProductInfoSection: React.FC = () => {
                         </h3>
 
                         <p className="text-lead" style={{ margin: '2rem 0', fontSize: '1.1rem' }}>
-                            هي شبكة بوابات دفع، مرتبطة بتطبيق خاص لكل تاجر يتيح له إدارة مبيعاته بأعلى كفاءة.
+                            شبكة بوابات دفع، مرتبطة بتطبيق خاص لكل تاجر يتيح له إدارة مبيعاته بأعلى كفاءة.
                         </p>
 
                         <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -29,7 +29,7 @@ const ProductInfoSection: React.FC = () => {
                         </ul>
 
                         <div className="card" style={{ marginTop: '2rem', borderColor: 'var(--gold)' }}>
-                            <h4 className="heading-md" style={{ fontSize: '1.1rem' }}>طرق استلام الأرباح:</h4>
+                            <h4 className="heading-md" style={{ fontSize: '1.1rem' }}>طرق استلام المستحقات:</h4>
                             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
                                 <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: 'var(--gold)' }}>💵 كاش</span>
                                 <span className="btn" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(251, 191, 36, 0.1)', color: 'var(--gold)' }}>🏦 تحويل بنكي</span>

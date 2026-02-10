@@ -9,7 +9,7 @@ const RisksSection: React.FC = () => {
                     <div className="text-center mb-12">
                         <h2 className="heading-lg">لماذا البوابات التقليدية ليست حلًا آمنًا؟</h2>
                         <p className="text-lead">
-                            الاعتماد على بوابة دفع واحدة هو الخطر الأكبر على استمرارية تجارتك.
+                            هذه ليست حلول تحصيل موثوقة، بل مخاطرة على استمرارية عملك.
                         </p>
                     </div>
 

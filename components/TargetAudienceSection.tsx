@@ -18,7 +18,7 @@ const TargetAudienceSection: React.FC = () => {
                                 <h3 className="heading-md" style={{ color: 'var(--success)' }}>مناسب لك إذا:</h3>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
-                                {['لديك متجر يعمل حالياً ولديه مبيعات', 'تستهدف عملاء بعملات أجنبية', 'عانيت من تجميد الحسابات أو تعقيد البنوك', 'تريد تشغيل حملاتك الإعلانية بدون خوف', 'تبحث عن استمرارية حقيقية وطويلة الأمد'].map((item, i) => (
+                                {['لديك متجر يعمل ومبيعات قائمة', 'تستهدف عملاء بعملات أجنبية', 'عانيت من تجميد الحسابات أو تعقيد البنوك', 'تريد التركيز على التسويق والبيع بدون خوف', 'تبحث عن استمرارية حقيقية وطويلة الأمد'].map((item, i) => (
                                     <li key={i} style={{ padding: '0.8rem 0', borderBottom: '1px solid rgba(34, 197, 94, 0.2)', display: 'flex', alignItems: 'center' }}>
                                         <span style={{ marginLeft: '10px', color: 'var(--success)' }}>✔</span> {item}
                                     </li>
@@ -35,7 +35,7 @@ const TargetAudienceSection: React.FC = () => {
                                 <h3 className="heading-md" style={{ color: 'var(--error)' }}>غير مناسب لك إذا:</h3>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
-                                {['متجرك وهمي أو لم يبدأ بعد', 'تبحث عن حلول مجانية تماماً', 'لا تريد الالتزام بقواعد العمل الاحترافي', 'تبيع منتجات مخالفة للقوانين'].map((item, i) => (
+                                {['متجرك وهمي أو لم يبدأ بعد', 'تبحث عن حلول مجانية تماماً', 'لا تريد الالتزام بقواعد العمل الاحترافي'].map((item, i) => (
                                     <li key={i} style={{ padding: '0.8rem 0', borderBottom: '1px solid rgba(239, 68, 68, 0.2)', display: 'flex', alignItems: 'center' }}>
                                         <span style={{ marginLeft: '10px', color: 'var(--error)' }}>✖</span> {item}
                                     </li>

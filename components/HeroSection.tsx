@@ -4,16 +4,17 @@ import AnimatedSection from './AnimatedSection';
 const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
     return (
         <section className="section hero-section" style={{
-            minHeight: '100vh',
+            minHeight: 'auto',
             display: 'flex',
             flexDirection: 'column',
             background: 'radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, var(--bg-primary) 70%)',
             textAlign: 'center',
             paddingTop: 0,
+            paddingBottom: '4rem',
         }}>
             <div style={{
                 width: '100%',
-                padding: '2rem',
+                padding: '1rem',
                 display: 'flex',
                 justifyContent: 'flex-end', // Aligns left in RTL
                 zIndex: 10
@@ -32,7 +33,8 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
                 flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center'
+                justifyContent: 'flex-start',
+                paddingTop: '2rem'
             }}>
                 <AnimatedSection className="hero-content">
                     <div style={{ marginBottom: '2rem' }}>
@@ -48,7 +50,7 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
                             marginBottom: '1.5rem',
                             backdropFilter: 'blur(10px)'
                         }}>
-                            للمتاجر الإلكترونية الجادة فقط 🚀
+                            فعل الدفع خلال 24 ساعة🚀
                         </span>
 
                         <h1 className="heading-xl">
@@ -62,12 +64,12 @@ const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
                     <div style={{ maxWidth: '800px', margin: '0 auto 3rem auto' }}>
                         <h2 className="heading-md" style={{ color: 'var(--text-secondary)', fontWeight: '400', lineHeight: '1.6' }}>
                             نظام تحصيل مبيعات متعدد العملات، مصمم ليستمر <br />
-                            <span style={{ color: '#fff', fontWeight: '700' }}>حتى لو تعطلت إحدى البوابات التقليدية.</span>
+                            <span style={{ color: '#fff', fontWeight: '700' }}>حتى لو تعطلت إحدى البوابات.</span>
                         </h2>
 
                         <p className="text-lead" style={{ marginTop: '2rem' }}>
                             نحن لا نقدم لك بوابة دفع. <br />
-                            نحن نضمك <strong style={{ color: 'var(--accent)' }}>لشبكة تحصيل تتحمّل المخاطر بدلًا عنك</strong> <br />
+                            بل نضمك <strong style={{ color: 'var(--accent)' }}>لشبكة بوابات تتحمّل المخاطر بدلًا عنك</strong> <br />
                             وتضمن استمرار استقبال المدفوعات بدون انقطاع.
                         </p>
                     </div>

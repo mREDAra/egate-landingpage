@@ -10,7 +10,7 @@ const JoinStepsSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) 
 
                     <div className="grid grid-3" style={{ marginTop: '3rem', alignItems: 'flex-start' }}>
                         {[
-                            { step: '1', title: 'تعبئة النموذج', desc: 'املأ نموذج التأهيل لنراجع نشاط متجرك.' },
+                            { step: '1', title: 'تعبئة النموذج', desc: 'املأ نموذج الطلب لنراجع نشاط مشروعك.' },
                             { step: '2', title: 'مراجعة النشاط', desc: 'نتأكد من أن نشاطك يوافق معايير الشبكة.' },
                             { step: '3', title: 'مكالمة تشخيص', desc: 'نناقش احتياجاتك ونحدد المسار الأنسب لك.' },
                             { step: '4', title: 'التفعيل', desc: 'يتم تفعيل حسابك وربطك بالشبكة خلال 24 ساعة.' },
