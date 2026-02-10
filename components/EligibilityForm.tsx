@@ -48,6 +48,13 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const modalBodyRef = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+        if (modalBodyRef.current) {
+            modalBodyRef.current.scrollTo(0, 0);
+        }
+    }, [step]);
 
     const handleChange = (field: keyof FormData, value: any) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -163,7 +170,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 </div>
 
                 {/* Body */}
-                <div className="modal-body">
+                <div className="modal-body" ref={modalBodyRef}>
 
                     {/* Important Note */}
                     <div className="important-note">
