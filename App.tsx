@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import HeroSection from './components/HeroSection';
 import PaymentLogos from './components/PaymentLogos';
 import ProblemSection from './components/ProblemSection';
@@ -9,18 +9,25 @@ import TargetAudienceSection from './components/TargetAudienceSection';
 import SocialProofSection from './components/SocialProofSection';
 import HighTicketSection from './components/HighTicketSection';
 import JoinStepsSection from './components/JoinStepsSection';
+import EligibilityForm from './components/EligibilityForm';
 import './index.css';
 
 const App: React.FC = () => {
+
+    const [isFormOpen, setIsFormOpen] = useState(false);
 
     useEffect(() => {
         // Simple scroll to top on load
         window.scrollTo(0, 0);
     }, []);
 
+    const handleOpenForm = () => setIsFormOpen(true);
+
     return (
         <div className="App">
-            <HeroSection />
+            {isFormOpen && <EligibilityForm onClose={() => setIsFormOpen(false)} />}
+
+            <HeroSection onOpenForm={handleOpenForm} />
             <PaymentLogos />
             <ProblemSection />
             <RisksSection />
@@ -29,7 +36,7 @@ const App: React.FC = () => {
             <TargetAudienceSection />
             <SocialProofSection />
             <HighTicketSection />
-            <JoinStepsSection />
+            <JoinStepsSection onOpenForm={handleOpenForm} />
 
             <footer style={{
                 padding: '2rem',

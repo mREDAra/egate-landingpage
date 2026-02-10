@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 
-const JoinStepsSection: React.FC = () => {
+const JoinStepsSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
     return (
         <section id="join-section" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
             <div className="container">
@@ -29,16 +29,19 @@ const JoinStepsSection: React.FC = () => {
                         <p className="text-lead" style={{ color: '#d1fae5' }}>
                             القبول يتم لعدد محدود فقط.
                         </p>
-                        <a href="https://tally.so/r/example" target="_blank" rel="noopener noreferrer" className="btn" style={{
+                        <button onClick={onOpenForm} className="btn" style={{
                             background: '#fff',
                             color: 'var(--accent-dark)',
                             fontWeight: 'bold',
                             padding: '1.2rem 4rem',
                             fontSize: '1.3rem',
-                            marginTop: '1rem'
+                            marginTop: '1rem',
+                            cursor: 'pointer',
+                            border: 'none',
+                            borderRadius: '50px'
                         }}>
                             قدّم طلب الانضمام الآن
-                        </a>
+                        </button>
                         <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.8, color: '#ecfdf5' }}>واكتشف إن كان نشاطك مؤهلًا للدخول إلى شبكة E-GATE Payment</p>
                     </div>
                 </AnimatedSection>

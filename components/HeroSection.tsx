@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC<{ onOpenForm: () => void }> = ({ onOpenForm }) => {
     return (
         <section className="section hero-section" style={{
             minHeight: '100vh',
@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
 
                     <button
                         className="btn btn-primary"
-                        onClick={() => document.getElementById('join-section')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={onOpenForm}
                     >
                         تحقق إن كان متجرك مؤهلًا للانضمام
                     </button>
