@@ -191,7 +191,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 1: Basic Info */}
                         {step === 1 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title">القسم 1️⃣ — معلومات أساسية</h3>
+
 
                                 <FormInput
                                     label="الاسم الكامل"
@@ -237,7 +237,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 2: Activity Filter */}
                         {step === 2 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title">القسم 2️⃣ — فلترة النشاط</h3>
+
 
                                 <RadioGroup
                                     label="نوع نشاط المتجر"
@@ -280,7 +280,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 3: Pain Points */}
                         {step === 3 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title">القسم 3️⃣ — كشف الألم الحقيقي</h3>
+
 
                                 <MultiSelectGroup
                                     label="ما هي المشكلة الأكبر التي تواجهك حاليًا في الدفع؟"
@@ -323,7 +323,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 4: Volume & Serious */}
                         {step === 4 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title">القسم 4️⃣ — الجدية والحجم</h3>
+
 
                                 <RadioGroup
                                     label="متوسط حجم المبيعات الشهري حاليًا (تقريبي):"
@@ -366,7 +366,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 5: Mindset */}
                         {step === 5 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title">القسم 5️⃣ — تهيئة ذهنية للسعر والمخاطرة</h3>
+
 
                                 <RadioGroup
                                     label="أي عبارة تصف وضعك بشكل أدق؟"
@@ -400,7 +400,7 @@ const EligibilityForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Section 6: Gold Question */}
                         {step === 6 && (
                             <div className="fade-in-section is-visible">
-                                <h3 className="section-title" style={{ color: 'var(--gold)' }}>القسم 6️⃣ — سؤال كاشف (Gold Question)</h3>
+
 
                                 <div className="gold-section">
                                     <label className="label-text" style={{ marginBottom: '1rem' }}>
